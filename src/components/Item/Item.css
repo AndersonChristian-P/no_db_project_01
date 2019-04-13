@@ -24,7 +24,7 @@
 .list-item-category {
   height: auto;
   text-align: center;
-  word-wrap: break-word;
+  word-break: break-all;
   display: inline-block;
   padding: 0.5rem;
   border-top-left-radius: 5px;
@@ -39,7 +39,7 @@
 .list-item-gear {
   height: auto;
   text-align: center;
-  word-wrap: break-word;
+  word-break: break-all;
   display: inline-block;
   padding: 0.5rem;
   border-bottom-left-radius: 5px;
