@@ -82,6 +82,7 @@ export default class Items extends Component {
         </div>
 
         <div className="item-cards">
+          <span className="toolkit">ToolKit</span>
           {this.state.items.filter(val => {
             return val.items.toLowerCase().includes(this.state.filter) ||
               val.items.toUpperCase().includes(this.state.filter)
