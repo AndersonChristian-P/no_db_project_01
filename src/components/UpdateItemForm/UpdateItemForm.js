@@ -35,14 +35,14 @@ export default class UpdateItemForm extends Component {
             className="edit-item"
             onChange={this.handleChange}
             type="text"
-            placeholder={this.state.category}
+            value={this.state.category}
             name="category"
           />
           <input
             className="edit-item"
             onChange={this.handleChange}
             type="text"
-            placeholder={this.state.items}
+            value={this.state.items}
             name="items"
           />
         </div>
