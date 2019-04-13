@@ -23,7 +23,8 @@ export default class CreateNewItemForm extends Component {
     let newItem = this.state
     this.props.createNewItem(newItem)
     this.setState({
-      item: ""
+      category: "",
+      items: ""
     })
   }
 
@@ -37,6 +38,7 @@ export default class CreateNewItemForm extends Component {
             type="text"
             placeholder="category"
             name="category"
+            value={this.state.category}
           />
           <input
             className="create-item-input-items"
@@ -44,6 +46,7 @@ export default class CreateNewItemForm extends Component {
             type="text"
             placeholder="gear"
             name="items"
+            value={this.state.items}
           />
         </span>
 
