@@ -10,7 +10,8 @@ export default class Items extends Component {
     super()
 
     this.state = {
-      items: []
+      items: [],
+      filter: ""
     }
   }
 
@@ -24,6 +25,10 @@ export default class Items extends Component {
       .catch(err => {
         console.log(`GET error ${err}`)
       })
+  }
+
+  handleFilterChange = (event) => {
+    this.setState({ filter: event.target.value })
   }
 
   createNewItem = (item) => {
@@ -68,15 +73,21 @@ export default class Items extends Component {
 
         <CreateNewItem createNewItem={this.createNewItem} />
 
+        <input onChange={this.handleFilterChange} placeholder="Filter Through Gear" />
+
         <div>
-          {this.state.items.map(item => {
-            return <Item
-              key={item.id}
-              item={item}
-              updateItem={this.updateItem}
-              deleteItem={this.deleteItem}
-            />
-          })}
+          {this.state.items.filter(val => {
+            return val.items.toLowerCase().includes(this.state.filter) ||
+              val.items.toUpperCase().includes(this.state.filter)
+          })
+            .map(item => {
+              return <Item
+                key={item.id}
+                item={item}
+                updateItem={this.updateItem}
+                deleteItem={this.deleteItem}
+              />
+            })}
         </div>
       </div>
     )
