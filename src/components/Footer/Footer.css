@@ -14,3 +14,10 @@ footer {
 	align-items: center;
 	align-content: stretch;
 }
+
+a {
+  margin-right: 1em;
+  text-transform: uppercase;
+  text-decoration: none;
+  font-size: 1em;
+}
