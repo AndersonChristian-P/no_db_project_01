@@ -11,6 +11,7 @@ app.post("/api/kit", KitCtrl.create)
 app.get("/api/kit", KitCtrl.request)
 
 app.put("/api/kit/:id", KitCtrl.update)
+app.delete("/api/kit/:id", KitCtrl.delete)
 
 
 app.listen(port, () => {

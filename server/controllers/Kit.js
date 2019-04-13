@@ -66,5 +66,12 @@ module.exports = {
     let index = kit.findIndex(item => +item.id === +id)
     kit.splice(index, 1, newItem)
     res.send(kit)
+  },
+
+  delete: (req, res) => {
+    let { id } = req.params
+    let index = kit.findIndex(item => +item.id === +id)
+    kit.splice(index, 1)
+    res.send(kit)
   }
 }
