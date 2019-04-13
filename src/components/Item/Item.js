@@ -2,6 +2,8 @@ import React, { Component } from "react"
 
 import UpdateItemForm from "../UpdateItemForm/UpdateItemForm"
 
+import "./Item.css"
+
 export default class Item extends Component {
   constructor() {
     super()
@@ -28,11 +30,16 @@ export default class Item extends Component {
           toggleEdit={this.toggleEdit}
           updateItem={this.props.updateItem} /> :
 
-        <div>
-          <p>{item.category}</p>
-          <p>{item.items}</p>
-          <button onClick={this.toggleEdit}>Edit</button>
-          <button onClick={() => this.props.deleteItem(item.id)} >Delete</button>
+        <div className="item-card">
+          <div className="list-items">
+            <p className="list-item category">{item.category}</p>
+            <p className="list-item">{item.items}</p>
+          </div>
+
+          <div>
+            <button className="edit" onClick={this.toggleEdit}>Edit...</button>
+            <button className="delete" onClick={() => this.props.deleteItem(item.id)} >Delete</button>
+          </div>
           <hr />
         </div>
     )

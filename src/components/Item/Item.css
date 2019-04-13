@@ -1,0 +1,74 @@
+.item-card {
+  /* border: 1px solid green; */
+	display: flex;
+	flex-direction: column;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	align-items: center;
+	align-content: stretch;
+  margin: 0.5em 0.5em;
+  height: 20vh;
+  width: 20vw;
+  /* width: 40vw; */
+  box-shadow: 5px 5px 16px -2px rgba(0,0,0,0.4);
+}
+
+.list-items {
+	display: flex;
+	flex-direction: column;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: stretch;
+  align-content: stretch;
+  width: 100%;
+}
+
+.list-item {
+  height: auto;
+  text-align: center;
+  word-wrap: break-word;
+  display: inline-block;
+  padding: 0.5rem;
+  /* width: 40vw; */
+  font-size: 1.2em;
+  vertical-align: bottom;
+  background-color: #C2A080; 
+}
+
+.category {
+  border-bottom: 1px solid black;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+.edit {
+  font-weight: 700;
+  cursor: pointer;
+  background-color: #D1C6C3;
+  border: none;
+  font-size: 1em;
+  text-shadow: 1.5px 1.5px 3px rgba(0, 0, 0, 0.5);
+  cursor: pointer;
+  vertical-align: middle;
+}
+
+.edit:hover {
+  transition-duration: 200ms;
+  color: blue;
+}
+
+.delete {
+  font-weight: 700;
+  font-size: 1em;
+  border: none;
+  background-color: #D1C6C3;
+  text-shadow: 1.5px 1.5px 3px rgba(0, 0, 0, 0.5);
+  cursor: pointer;
+  vertical-align: middle;
+}
+
+.delete:hover {
+  transition-duration: 575ms;
+  color: red;
+  font-size: 1.2em;
+}

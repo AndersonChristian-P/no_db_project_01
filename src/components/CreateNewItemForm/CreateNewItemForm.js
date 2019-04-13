@@ -1,5 +1,7 @@
 import React, { Component } from "react"
 
+import "./CreateNewItemForm.css"
+
 export default class CreateNewItemForm extends Component {
   constructor() {
     super()
@@ -24,22 +26,25 @@ export default class CreateNewItemForm extends Component {
 
   render() {
     return (
-      <div>
-        <input
-          onChange={this.handleChange}
-          type="text"
-          placeholder="category"
-          name="category"
-        />
+      <div className="create-item">
+        <span className="create-item-inputs">
+          <input
+            className="create-item-input-category"
+            onChange={this.handleChange}
+            type="text"
+            placeholder="category"
+            name="category"
+          />
+          <input
+            className="create-item-input-items"
+            onChange={this.handleChange}
+            type="text"
+            placeholder="gear"
+            name="items"
+          />
+        </span>
 
-        <input
-          onChange={this.handleChange}
-          type="text"
-          placeholder="items"
-          name="items"
-        />
-
-        <button onClick={this.handleClick}>Submit</button>
+        <button className="create-item-button" onClick={this.handleClick}>Submit</button>
       </div>
     )
   }

@@ -4,6 +4,8 @@ import axios from "axios"
 import Item from "../Item/Item"
 import CreateNewItem from "../CreateNewItemForm/CreateNewItemForm"
 
+import "./Items.css"
+
 export default class Items extends Component {
 
   constructor() {
@@ -69,13 +71,13 @@ export default class Items extends Component {
 
   render() {
     return (
-      <div>
+      <div className="hero">
 
         <CreateNewItem createNewItem={this.createNewItem} />
 
-        <input onChange={this.handleFilterChange} placeholder="Filter Through Gear" />
+        <input className="filter-item-input" onChange={this.handleFilterChange} placeholder="Filter Through Gear" />
 
-        <div>
+        <div className="item-cards">
           {this.state.items.filter(val => {
             return val.items.toLowerCase().includes(this.state.filter) ||
               val.items.toUpperCase().includes(this.state.filter)

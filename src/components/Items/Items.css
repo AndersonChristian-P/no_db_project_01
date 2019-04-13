@@ -1,0 +1,35 @@
+.hero {
+  display: flex;
+	flex-direction: column;
+	flex-wrap: nowrap;
+	justify-content: center;
+	align-items: center;
+  align-content: stretch;
+  padding: 0 1em;
+  margin-top: 150px;
+  padding-bottom: 12vh;
+}
+
+.filter-item-input {
+  margin: 5vh 0;
+  height: 6.5vh;
+  width: 25vw;
+  font-size: 1.5em;
+  padding-left: 0.5vw;
+  vertical-align: bottom;
+  border: none;
+  border-radius: 5px;
+  background-color: #FFFFFF;
+  box-shadow: 5px 5px 16px -2px rgba(0,0,0,0.4);
+}
+
+.item-cards {
+  /* border: 1px solid red; */
+  width: 90%;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: flex-start;
+	align-items: baseline;
+	align-content: stretch;
+}
