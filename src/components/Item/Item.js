@@ -1,25 +1,40 @@
 import React, { Component } from "react"
 
+import UpdateItemForm from "../UpdateItemForm/UpdateItemForm"
+
 export default class Item extends Component {
   constructor() {
     super()
 
     this.state = {
-
+      edit: false
     }
   }
+
+  toggleEdit = () => {
+    this.setState({
+      edit: !this.state.edit
+    })
+  }
+
 
   render() {
     let { item } = this.props
 
     return (
-      <div>
-        <p>{item.category}</p>
-        <p>{item.items}</p>
+      this.state.edit ?
 
-        <button>Edit</button>
-        <hr />
-      </div>
+        <UpdateItemForm
+          item={item}
+          toggleEdit={this.toggleEdit}
+          updateItem={this.props.updateItem} /> :
+
+        <div>
+          <p>{item.category}</p>
+          <p>{item.items}</p>
+          <button onClick={this.toggleEdit}>Edit</button>
+          <hr />
+        </div>
     )
   }
 }
