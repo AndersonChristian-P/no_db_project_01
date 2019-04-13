@@ -50,6 +50,18 @@ export default class Items extends Component {
       })
   }
 
+  deleteItem = (id) => {
+    axios.delete(`/api/kit/${id}`)
+      .then(res => {
+        this.setState({
+          items: res.data
+        })
+      })
+      .catch(err => {
+        console.log(`DELETE err ${err}`)
+      })
+  }
+
   render() {
     return (
       <div>
@@ -62,13 +74,11 @@ export default class Items extends Component {
               key={item.id}
               item={item}
               updateItem={this.updateItem}
+              deleteItem={this.deleteItem}
             />
           })}
         </div>
       </div>
     )
   }
-
-
-
 }

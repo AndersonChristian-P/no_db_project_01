@@ -17,7 +17,6 @@ export default class Item extends Component {
     })
   }
 
-
   render() {
     let { item } = this.props
 
@@ -33,6 +32,7 @@ export default class Item extends Component {
           <p>{item.category}</p>
           <p>{item.items}</p>
           <button onClick={this.toggleEdit}>Edit</button>
+          <button onClick={() => this.props.deleteItem(item.id)} >Delete</button>
           <hr />
         </div>
     )
