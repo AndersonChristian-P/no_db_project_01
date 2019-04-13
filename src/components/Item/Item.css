@@ -4,8 +4,9 @@
 	justify-content: center;
 	align-items: center;
 	align-content: stretch;
-  margin: 1em 0;
+  margin: 1rem 0;
   width: 30vw;
+  color: #444444;
 }
 
 .list-items {
@@ -30,7 +31,7 @@
   border-top-right-radius: 5px;
   font-size: 1.2em;
   font-weight: 700;
-  text-shadow: 1.5px 1.5px 3px rgba(0, 0, 0, 0.5);
+  text-shadow: 1.5px 1.5px 6px rgba(0, 0, 0, 0.5);
   vertical-align: bottom;
   background-color: #C2A080; 
 }
@@ -44,7 +45,7 @@
   border-bottom-left-radius: 5px;
   border-bottom-right-radius: 5px;
   font-size: 1.2em;
-  text-shadow: 1.5px 1.5px 3px rgba(0, 0, 0, 0.5);
+  text-shadow: 1.5px 1.5px 6px rgba(0, 0, 0, 0.5);
   vertical-align: bottom;
   background-color: #C2A080; 
 }
@@ -58,7 +59,7 @@
 	flex-wrap: nowrap;
 	justify-content: flex-start;
 	align-items: center;
-	align-content: stretch;
+  align-content: stretch;
 }
 
 .edit {
@@ -67,9 +68,10 @@
   background-color: #D1C6C3;
   border: none;
   font-size: 1em;
-  text-shadow: 1.5px 1.5px 3px rgba(0, 0, 0, 0.5);
+  text-shadow: 1.5px 1.5px 6px rgba(0, 0, 0, 0.5);
   cursor: pointer;
   vertical-align: middle;
+  color: #444444;
 }
 
 .edit:hover {
@@ -84,13 +86,23 @@
   border: none;
   background-color: #D1C6C3;
   margin-left: 1em;
-  text-shadow: 1.5px 1.5px 3px rgba(0, 0, 0, 0.5);
+  text-shadow: 1.5px 1.5px 6px rgba(0, 0, 0, 0.5);
   cursor: pointer;
   vertical-align: middle;
+  color: #444444;
 }
 
 .delete:hover {
   transition-duration: 575ms;
   color: red;
   font-size: 1.2em;
+}
+
+hr {
+  border: 0;
+  height: 1px;
+  display: block;
+  width: 100%;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3); 
 }

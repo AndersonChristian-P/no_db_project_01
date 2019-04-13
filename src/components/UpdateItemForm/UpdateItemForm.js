@@ -29,23 +29,30 @@ export default class UpdateItemForm extends Component {
 
   render() {
     return (
-      <div>
-        <input
-          onChange={this.handleChange}
-          type="text"
-          placeholder={this.state.category}
-          name="category"
-        />
+      <div className="update">
+        <div className="update-inputs">
+          <input
+            className="edit-item"
+            onChange={this.handleChange}
+            type="text"
+            placeholder={this.state.category}
+            name="category"
+          />
+          <input
+            className="edit-item"
+            onChange={this.handleChange}
+            type="text"
+            placeholder={this.state.items}
+            name="items"
+          />
+        </div>
 
-        <input
-          onChange={this.handleChange}
-          type="text"
-          placeholder={this.state.items}
-          name="items"
-        />
+        <div className="update-buttons" >
+          <button className="edit-item-button" onClick={this.handleClick}>Submit</button>
+          <button className="edit-cancel-button" onClick={this.props.toggleEdit}>Cancel</button>
+        </div>
 
-        <button onClick={this.handleClick}>Submit</button>
-        <button onClick={this.props.toggleEdit}>Cancel</button>
+        <hr className="update-hr" />
 
       </div>
     )
