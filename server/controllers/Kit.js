@@ -48,5 +48,13 @@ let kit = [
 module.exports = {
   request: (req, res) => {
     res.send(kit)
-  }
+  },
+
+  create: (req, res) => {
+    let newItem = req.body
+    newItem.id = id++
+    newItem.preset = ""
+    kit.push(newItem)
+    res.send(kit)
+  },
 }
