@@ -25,7 +25,6 @@ export default class UpdateItemForm extends Component {
     this.props.toggleEdit()
   }
 
-
   render() {
     return (
       <div>
