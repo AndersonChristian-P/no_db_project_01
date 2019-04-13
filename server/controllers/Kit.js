@@ -46,10 +46,6 @@ let kit = [
 ]
 
 module.exports = {
-  request: (req, res) => {
-    res.send(kit)
-  },
-
   create: (req, res) => {
     let newItem = req.body
     newItem.id = id++
@@ -57,4 +53,18 @@ module.exports = {
     kit.push(newItem)
     res.send(kit)
   },
+
+  request: (req, res) => {
+    res.send(kit)
+  },
+
+  update: (req, res) => {
+    let { id } = req.params
+    let newItem = req.body
+    newItem.id = id
+    newItem.preset = ""
+    let index = kit.findIndex(item => +item.id === +id)
+    kit.splice(index, 1, newItem)
+    res.send(kit)
+  }
 }
