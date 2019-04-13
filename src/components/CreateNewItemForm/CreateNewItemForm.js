@@ -22,6 +22,9 @@ export default class CreateNewItemForm extends Component {
   handleClick = () => {
     let newItem = this.state
     this.props.createNewItem(newItem)
+    this.setState({
+      item: ""
+    })
   }
 
   render() {
