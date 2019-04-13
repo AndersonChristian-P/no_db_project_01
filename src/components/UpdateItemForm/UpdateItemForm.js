@@ -1,5 +1,7 @@
 import React, { Component } from "react"
 
+import "./UpdateItemForm.css"
+
 export default class UpdateItemForm extends Component {
   constructor(props) {
     super(props)

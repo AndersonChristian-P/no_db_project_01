@@ -44,7 +44,7 @@ export default class CreateNewItemForm extends Component {
           />
         </span>
 
-        <button className="create-item-button" onClick={this.handleClick}>Submit</button>
+        <button className="create-item-button" onClick={this.handleClick}>Add New Item(s)</button>
       </div>
     )
   }

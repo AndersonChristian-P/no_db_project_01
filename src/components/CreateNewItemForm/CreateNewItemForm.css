@@ -1,11 +1,10 @@
 .create-item {
-  margin-bottom: 3vh;
   width: auto;
-  display: flex;
-	flex-direction: row;
+	display: flex;
+	flex-direction: column;
 	flex-wrap: nowrap;
-	justify-content: center;
-	align-items: center;
+	justify-content: flex-start;
+	align-items: flex-start;
 	align-content: stretch;
 }
 
@@ -19,6 +18,7 @@
 }
 
 .create-item-input-category {
+  width: 18.5vw;
   height: 7vh;
   text-transform: capitalize;
   font-size: 1.5em;
@@ -31,10 +31,12 @@
 }
 
 .create-item-input-items {
+  width: 18.5vw;
   height: 7vh;
   text-transform: capitalize;
   font-size: 1.5em;
   padding-left: 0.5vw;
+  margin-bottom: 0.5em;
   border: none;
   border-radius: 5px;
   background-color: #FFFFFF;
@@ -43,8 +45,8 @@
 
 .create-item-button {
   height: 7vh;
-  width: 10vh;
-  margin-left: 0.8vw;
+  width: 15vh;
+  /* margin-left: 0.8vw; */
   margin-top: auto;
   background-color: #76323F;
   border: none;

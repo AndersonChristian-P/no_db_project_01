@@ -73,9 +73,13 @@ export default class Items extends Component {
     return (
       <div className="hero">
 
-        <CreateNewItem createNewItem={this.createNewItem} />
+        <div className="top-view">
+          <CreateNewItem createNewItem={this.createNewItem} />
 
-        <input className="filter-item-input" onChange={this.handleFilterChange} placeholder="Filter Through Gear" />
+          <div className="filter">
+            <input className="filter-item-input" onChange={this.handleFilterChange} placeholder="Filter Through Gear" />
+          </div>
+        </div>
 
         <div className="item-cards">
           {this.state.items.filter(val => {
