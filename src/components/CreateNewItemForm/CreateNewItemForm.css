@@ -20,7 +20,6 @@
 .create-item-input-category {
   width: 18.5vw;
   height: 7vh;
-  text-transform: capitalize;
   font-size: 1.5em;
   padding-left: 0.5vw;
   margin-bottom: 0.5em;
@@ -33,7 +32,6 @@
 .create-item-input-items {
   width: 18.5vw;
   height: 7vh;
-  text-transform: capitalize;
   font-size: 1.5em;
   padding-left: 0.5vw;
   margin-bottom: 0.5em;
