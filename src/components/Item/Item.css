@@ -64,14 +64,16 @@
 
 .edit {
   font-weight: 700;
+  font-size: 1em;
+  color: #444444;
+  transition: color 575ms;
+  transition: font-size 575ms;
   cursor: pointer;
   background-color: #D1C6C3;
   border: none;
-  font-size: 1em;
   text-shadow: 1.5px 1.5px 6px rgba(0, 0, 0, 0.5);
   cursor: pointer;
   vertical-align: middle;
-  color: #444444;
 }
 
 .edit:hover {
@@ -83,13 +85,15 @@
 .delete {
   font-weight: 700;
   font-size: 1em;
+  color: #444444;
+  transition: color 575ms;
+  transition: font-size 575ms;
   border: none;
   background-color: #D1C6C3;
   margin-left: 1em;
   text-shadow: 1.5px 1.5px 6px rgba(0, 0, 0, 0.5);
   cursor: pointer;
   vertical-align: middle;
-  color: #444444;
 }
 
 .delete:hover {
