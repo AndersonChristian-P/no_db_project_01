@@ -38,7 +38,7 @@ export default class Item extends Component {
 
           <div className="item-buttons">
             <button className="edit" onClick={this.toggleEdit}>Edit...</button>
-            <button className="delete" onClick={() => this.props.deleteItem(item.id)} >X</button>
+            <button className="delete" onClick={() => this.props.deleteItem(item.id)} >Delete</button>
           </div>
           <hr />
         </div>
