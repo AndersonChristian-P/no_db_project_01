@@ -36,7 +36,7 @@ export default class CreateNewItemForm extends Component {
             className="create-item-input-category"
             onChange={this.handleChange}
             type="text"
-            placeholder="category"
+            placeholder="Category"
             name="category"
             value={this.state.category}
           />
@@ -44,7 +44,7 @@ export default class CreateNewItemForm extends Component {
             className="create-item-input-items"
             onChange={this.handleChange}
             type="text"
-            placeholder="gear"
+            placeholder="Gear"
             name="items"
             value={this.state.items}
           />
