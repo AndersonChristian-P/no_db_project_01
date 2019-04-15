@@ -36,7 +36,7 @@ export default class FilterItems extends Component {
       <div className="filter">
 
         <span className="filter-input">
-          <input className="filter-item-input" onChange={this.handleChange} placeholder="Filter Through Gear" value={this.state.items} />
+          <input className="filter-item-input" onChange={this.handleChange} placeholder="Filter Through Category or Gear" value={this.state.items} />
         </span>
 
         <spa className="filter-buttons">

@@ -58,9 +58,11 @@ module.exports = {
     let { items } = req.query
     if (items) {
       return res.send(kit.filter(val => {
-        return val.items.toLowerCase().includes(items) ||
-          val.items.toUpperCase().includes(items)
-      })) // the query searches for keywords in each object's 'items' key
+        return (val.category.toLowerCase().includes(items) ||
+          val.category.toUpperCase().includes(items)) ||
+          (val.items.toLowerCase().includes(items) ||
+            val.items.toUpperCase().includes(items))
+      })) // the query searches for keywords in 'category' and 'items'
     }
     res.send(kit)
   },
