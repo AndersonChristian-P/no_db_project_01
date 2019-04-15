@@ -103,14 +103,3 @@ export default class Items extends Component {
     )
   }
 }
-
-
-// {this.state.items.filter(val => {
-//   return val.items.toLowerCase().includes(this.state.filter) ||
-//     val.items.toUpperCase().includes(this.state.filter)
-// })
-
-
-// <div className="filter">
-// <input className="filter-item-input" onChange={this.handleFilterChange} placeholder="Filter Through Gear" />
-// </div>
