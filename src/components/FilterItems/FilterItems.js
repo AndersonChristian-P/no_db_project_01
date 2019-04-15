@@ -1,5 +1,7 @@
 import React, { Component } from "react"
 
+import "./FilterItems.css"
+
 export default class FilterItems extends Component {
 
   constructor() {
@@ -31,13 +33,16 @@ export default class FilterItems extends Component {
 
   render() {
     return (
-      <div>
+      <div className="filter">
 
-        <div className="filter">
+        <span className="filter-input">
           <input className="filter-item-input" onChange={this.handleChange} placeholder="Filter Through Gear" value={this.state.items} />
-          <button onClick={this.applyFilter}>Filter</button>
-          <button onClick={this.removeFilter}>Remove Filter</button>
-        </div>
+        </span>
+
+        <spa className="filter-buttons">
+          <button className="filter-button" onClick={this.applyFilter}>Filter</button>
+          <button className="filter-button remove" onClick={this.removeFilter}>Remove Filter</button>
+        </spa>
 
       </div>
     )
