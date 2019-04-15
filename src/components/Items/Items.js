@@ -1,6 +1,7 @@
 import React, { Component } from "react"
 import axios from "axios"
 
+import FilterItems from "../FilterItems/FilterItems"
 import Item from "../Item/Item"
 import CreateNewItem from "../CreateNewItemForm/CreateNewItemForm"
 
@@ -13,7 +14,6 @@ export default class Items extends Component {
 
     this.state = {
       items: [],
-      filter: ""
     }
   }
 
@@ -29,8 +29,16 @@ export default class Items extends Component {
       })
   }
 
-  handleFilterChange = (event) => {
-    this.setState({ filter: event.target.value })
+  filterItems = (items) => {
+    axios.get(`/api/kit?items=${items}`)
+      .then(res => {
+        this.setState({
+          items: res.data
+        })
+      })
+      .catch(err => {
+        console.log(`QUERY GET err ${err} `)
+      })
   }
 
   createNewItem = (item) => {
@@ -76,27 +84,33 @@ export default class Items extends Component {
         <div className="top-view">
           <CreateNewItem createNewItem={this.createNewItem} />
 
-          <div className="filter">
-            <input className="filter-item-input" onChange={this.handleFilterChange} placeholder="Filter Through Gear" />
-          </div>
+          <FilterItems filterItems={this.filterItems} />
         </div>
 
         <div className="item-cards">
           <span className="toolkit">ToolKit</span>
-          {this.state.items.filter(val => {
-            return val.items.toLowerCase().includes(this.state.filter) ||
-              val.items.toUpperCase().includes(this.state.filter)
-          })
-            .map(item => {
-              return <Item
-                key={item.id}
-                item={item}
-                updateItem={this.updateItem}
-                deleteItem={this.deleteItem}
-              />
-            })}
+
+          {this.state.items.map(item => {
+            return <Item
+              key={item.id}
+              item={item}
+              updateItem={this.updateItem}
+              deleteItem={this.deleteItem}
+            />
+          })}
         </div>
       </div>
     )
   }
 }
+
+
+// {this.state.items.filter(val => {
+//   return val.items.toLowerCase().includes(this.state.filter) ||
+//     val.items.toUpperCase().includes(this.state.filter)
+// })
+
+
+// <div className="filter">
+// <input className="filter-item-input" onChange={this.handleFilterChange} placeholder="Filter Through Gear" />
+// </div>
